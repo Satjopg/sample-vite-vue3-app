@@ -5,8 +5,7 @@ const routes = [
     path: '/',
     name: 'top',
     component: async () => {
-      const top = await import('@/pages/Top.vue');
-      console.log(top)
+      const top = await import('@/pages/TopPage.vue');
       return top;
     }
   },
@@ -14,7 +13,7 @@ const routes = [
     path: '/login',
     name: 'login',
     component: async () => {
-      const login = await import('@/pages/Login.vue');
+      const login = await import('@/pages/LoginPage.vue');
       return login;
     }
   }
@@ -26,8 +25,8 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to, from, next) => {
-  console.log(to)
-  next()
+  console.log(to);
+  next();
 });
 
 export default router;
